@@ -20,28 +20,23 @@
         </Grid.ColumnDefinitions>
 
         <Border Grid.Row="1" Grid.Column="1" Padding="30 15" CornerRadius="25" Background="Gray">
-            <UniformGrid Rows="1"
-        HorizontalAlignment="Stretch"
-        VerticalAlignment="Stretch">
+            <UniformGrid Rows="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                 <Border Style="{StaticResource NavigationButtonBorder}">
-                    <Button Style="{StaticResource NavigationButton}" Content="Список ЖК"/>
+                    <Button x:Name="BtnResComp" Click="BtnResComp_Click" Style="{StaticResource NavigationButton}" Content="Список ЖК"/>
                 </Border>
                 <Border Style="{StaticResource NavigationButtonBorder}">
-                    <Button Style="{StaticResource NavigationButton}" Content="Список домов"/>
+                    <Button x:Name="BtnHouse" Click="BtnHouse_Click" Style="{StaticResource NavigationButton}" Content="Список домов"/>
                 </Border>
                 <Border Style="{StaticResource NavigationButtonBorder}">
-                    <Button Content="Список квартир" Style="{StaticResource NavigationButton}"/>
+                    <Button x:Name="BtnApartment" Click="BtnApartment_Click" Content="Список квартир" Style="{StaticResource NavigationButton}"/>
                 </Border>
             </UniformGrid>
         </Border>
+
         <Border Padding="30 15" Grid.Row="2" Grid.Column="1" Margin="0 30 0 0" CornerRadius="20" Background="Gray">
             <UniformGrid Rows="2" Columns="1">
-                <Frame Source="ListRC.xaml" NavigationUIVisibility="Hidden">
-
-                </Frame>
-                <Border VerticalAlignment="Bottom" Height="50" CornerRadius="10" Background="Aqua">
-                    <Button>Редактировать данные</Button>
-                </Border>
+                <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"></Frame>
+                <Frame x:Name="Editor" VerticalAlignment="Bottom" NavigationUIVisibility="Hidden"></Frame>
             </UniformGrid>
         </Border>
     </Grid>

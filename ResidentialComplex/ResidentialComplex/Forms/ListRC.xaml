@@ -31,7 +31,7 @@
             <ComboBox Style="{StaticResource Filter}" x:Name="filter1" Height="30" HorizontalAlignment="Stretch" Margin="20"/>
             <ComboBox Style="{StaticResource Filter}" x:Name="filter2" Height="30" HorizontalAlignment="Stretch" Margin="20"/>
         </UniformGrid>
-        <DataGrid Grid.Row="2" x:Name="DGridHotels">
+        <DataGrid Grid.Row="2" x:Name="DGridRC">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Название"></DataGridTextColumn>
                 <DataGridTextColumn Header="Статус"></DataGridTextColumn>
